@@ -1,0 +1,95 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+  font-weight: 500;
+}
+
+/* Navbar */
+#navbar{
+    display: flex;
+    gap: 37%;
+    margin-top: 40px;
+    font-weight: 700;
+    font-size: 18px;
+    color: hsl(0, 0%, 75%);
+}
+#navLeft{
+    display: flex;
+    gap: 27px;
+    margin-left: 80px;
+}
+#navLeft div:hover{
+  color: black;
+}
+#navRight div:hover{
+  color: black;
+}
+
+#signUp{
+  background-color: hsl(180, 66%, 49%);
+    border-radius: 30px;
+    width: 130px;
+    height: 50px;
+    text-align: center;
+    position: absolute;
+    border: none;
+    right: 80px;
+    top: 30px;
+    font-size: 16px;
+    font-size: 18px;
+    font-weight: 700;
+    color:whitesmoke;
+}
+#signUp:hover{
+  background-color: hsl(180, 45%, 76%);
+
+}
+
+/* second section */
+
+#SecondSection{
+  display: flex;
+  gap: 0px;
+  margin-left: 80px;
+  margin-top: 80px;
+}
+#ImageMain{
+  width: 86%;
+  height: 100%;
+}
+#moreThan{
+  font-size: 65px;
+  width: 90%;
+}
+#para{
+  width: 60%;
+  font-size: 18px;
+}
+#getStartedBtn{
+  margin-top: 30px;
+  border: none;
+  background-color: hsl(180, 66%, 49%);
+border-radius: 30px;
+padding: 18px;
+width: 200px;
+font-size: 18px;
+color: whitesmoke;
+font-weight: 700;
+}
+#getStartedBtn:hover{
+  background-color: hsl(180, 45%, 76%);
+
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+  color: rgb(239, 241, 241);
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
