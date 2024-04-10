@@ -3,6 +3,7 @@ const ShortBtn = document.getElementById('ShortBtn')
 const CreateLinkSection = document.getElementById('CreateLinkSection')
 
 async function short() {
+    
     let value = ShortInput.value;
     const response = await fetch(`https://tinyurl.com/api-create.php?url=${value}`);
     let data = await response.text(); //.json() is not working
@@ -38,9 +39,22 @@ async function short() {
     CreateLinkSection.append(Element)
 
     console.log(Element);
+    
+    btn.addEventListener('click',()=>{
+        setTimeout(() => {
+            btn.textContent = 'Copied'
+            btn.classList.add('linkBtn1')
+        }, 100);
+       
+        setTimeout(() => {
+            Element.classList.add('hide')
+        
+        }, 500);
+       
 
+    })
 
-
+    // const myTimeout = setTimeout(myGreeting, 5000);
 }
 
 
@@ -51,7 +65,12 @@ ShortBtn.addEventListener('click', () => {
 
 // to copy link
 btn.addEventListener('click',()=>{
-    btn.classList.add('linkBtn1')
+    const btn1 = document.createElement('button')
+    btn1.classList.add('linkBtn1')
+    btn1.textContent = 'Copy'
+    div.appendChild(btn1)
+    CreateLinkSection.append(Element)
+    // btn.classList.add('linkBtn1')
 })
 
 // const copyBtnAll = [...document.querySelectorAll('.linkBtn')]
