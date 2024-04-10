@@ -211,7 +211,6 @@ body {
   width: 60%;
   background-color: hsl(180, 66%, 49%);
   padding: 5px;
-  /* z-index: -1; */
   bottom: 285px;
   margin-left: 200px;
   position: relative;
@@ -223,7 +222,6 @@ body {
   gap: 40px;
   z-index: 100;
   margin-left: 80px;
-  /* margin-right: 70px; */
   margin-bottom: 200px;
 
 }
@@ -279,13 +277,70 @@ height: 260px;
   font-size: 33px;
   color: whitesmoke;
  }
- .boostBtn
+ .boostBtn{
+  padding: 15px;
+  background-color: hsl(180, 66%, 49%);
+width: 200px;
+font-size: 18px;
+border-radius: 20px;
+border: none;
+margin-top: 20px;
+font-weight: 600;
+color: whitesmoke;
+ }
+ .boostBtn:hover{
+  background-color: hsl(180, 45%, 76%);
+ }
+ /* Fotter*/
+ #footer{
+  padding-left: 80px;
+  padding-bottom: 80px;
+  background-color: black;
+  color: whitesmoke;
+  display: flex;
+  gap: 25%;
+  padding-top: 100px;
+ }
+ #otherFeature{
+  display: flex;
+  gap:100px;
+ }
+ #otherFeature > div > p{
+  color: hsl(0, 1%, 54%);
+ }
+ #otherFeature > div > p:hover{
+  color: hsl(180, 66%, 49%);
+ }
+ #socialMediaLogo{
+  display: flex;
+  gap: 20px;
+ }
+ #socialMediaLogo >img{
+  width: 20px;
+  height: 20px;
+ }
+ #socialMediaLogo >img:hover{
+  background-color: hsl(180, 66%, 49%);
+  /* fill:color(hsl 180,66% ,49%); */
+  fill: aqua;
+  border-radius: 5px;
+
+ }
+ #features,#resources,#company{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+ }
+
 .attribution {
   font-size: 11px;
   text-align: center;
   color: rgb(239, 241, 241);
+  color: aqua;
+  font-size: 15px;
 }
 
 .attribution a {
   color: hsl(228, 45%, 44%);
+  color: blue;
 }
