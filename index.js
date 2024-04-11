@@ -27,8 +27,8 @@ async function short() {
     const span1 = document.createElement('span')
     const ahref = document.createElement('a')
     ahref.classList.add('linkColor')
-    ahref.href =  data;
-    ahref.textContent =  data;
+    ahref.href = data;
+    ahref.textContent = data;
     span1.appendChild(ahref)
     div1.appendChild(span1)
 
@@ -39,9 +39,11 @@ async function short() {
     CreateLinkSection.append(Element)
 
     console.log(Element);
-    
-    btn.addEventListener('click',()=>{
-// to copy text
+
+
+    btn.addEventListener('click', () => {
+
+        // to copy text
         function copyShortLinkText() {
             let textArea = document.createElement('textarea');
             textArea.value = ahref.innerText;
@@ -49,65 +51,40 @@ async function short() {
             textArea.select()
             document.execCommand('copy');
             document.body.removeChild(textArea);
-            
+
         }
         copyShortLinkText()
 
-            btn.textContent = 'Copied'
-            btn.classList.add('linkBtn1')
-            ahref.style.color = 'red'
-            
-            setTimeout(() => {
-                btn.classList.remove('linkBtn1')
-                btn.textContent = 'Copy'
-                ahref.style.color = '#2bd1d1'
+        btn.textContent = 'Copied'
+        btn.classList.add('linkBtn1')
+        ahref.style.color = 'red'
+
+        setTimeout(() => {
+            btn.classList.remove('linkBtn1')
+            btn.textContent = 'Copy'
+            ahref.style.color = '#2bd1d1'
 
         }, 500);
-            setTimeout(() => {
-                Element.classList.add('hide')
-// document.location.reload()
+        setTimeout(() => {
+            Element.classList.add('hide')
         }, 1000);
-       
+
 
     })
 
 }
 
 
-
-// ShortBtn.addEventListener('click', () => {
-
-//     if (!ShortInput.value == [] ) {
-//         short()
-
-        
-//     } 
-//     else {
-//     ShortInput.style.border ="2px solid red"
-//     let span2 = document.createElement('span')
-//     span2.style.color = 'red'
-//     span2.textContent = 'Please add a link'
-//     thirdMain.appendChild(span2)
-// setTimeout(() => {
-//     thirdMain.removeChild(span2)
-//     ShortInput.style.border ="2px solid black"
-
-// }, 1000);
-  
-        
-//     }
-
-// })
 ShortBtn.addEventListener('click', () => {
     if (ShortInput.value.trim() !== "") {
         short();
-    } 
+    }
     else {
         if (!document.querySelector('.error-message')) {
             ShortInput.style.border = "2px solid red";
             ShortInput.style.Color = "blue";
             let span2 = document.createElement('span');
-            span2.className = 'error-message'; 
+            span2.className = 'error-message';
             console.log(span2);
             span2.style.color = 'red';
             span2.textContent = 'Please add a link';
@@ -123,10 +100,10 @@ ShortBtn.addEventListener('click', () => {
 // to media querry menu
 let menuHide = document.querySelector('.mainmediaQuery')
 let ImageMain = document.getElementById('ImageMain')
-document.querySelector('.logomenu').addEventListener('click',()=>{
-menuHide.classList.toggle('hide')
-ImageMain.classList.toggle('hide')
-console.log('hey');
+document.querySelector('.logomenu').addEventListener('click', () => {
+    menuHide.classList.toggle('hide')
+    ImageMain.classList.toggle('hide')
+    console.log('hey');
 })
 
 
