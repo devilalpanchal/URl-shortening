@@ -51,6 +51,7 @@ body {
   font-size: 18px;
   font-weight: 700;
   color: whitesmoke;
+  /* display: none; */
 }
 
 #signUp:hover {
@@ -193,9 +194,7 @@ body {
   font-size: 30px;
 }
 
-#StatisHeader {
-  margin-left: 500px;
-}
+
 
 #StatisParagraph {
   margin-left: 350px;
@@ -341,4 +340,192 @@ color: whitesmoke;
 .attribution a {
   color: hsl(228, 45%, 44%);
   color: blue;
+}
+.logomenu{
+  display: none;
+  width: 70px;
+  height: 70px;
+}
+
+/* media querry */
+@media only screen and (max-width:990px){ 
+  /* to navbar */
+   #navbar {
+    display: flex;
+    gap: 20%;
+    margin-left: 0px;
+  }
+  .navfeatur{
+    display: none;
+  }
+  #navRight > div{
+    display: none;
+  
+  }
+  #navLeft{
+    margin-left: 20px;
+  }
+  #navLeft > div{
+    margin-top: 20px;
+  }
+  .logomenu{
+    display: block;
+  }
+  #signUp {
+    display: none;
+  }
+  #ImageMain{
+    width: 140%;
+  }
+  /* <!-- Section - Second --> */
+  #SecondSection {
+    display: flex;
+    flex-direction: column-reverse;
+    gap: 100px;
+    margin-left: 20px;
+  }
+  #moreThan {
+    font-size: 45px;
+  }
+  #para {
+    width: 90%;
+    text-align: center;
+    font-weight: 700;
+    color: rgb(121, 122, 122);
+  }
+  
+#getStartedBtn {
+  margin-left: 70px;
+}
+/* Third section */
+#thirdMain {
+  background-image: url(./images/bg-shorten-mobile.svg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 90%;
+  height: 180px;
+  margin-left: 20px;
+}
+#ShortInput {
+  width: 100%;
+}
+#ShortBtn {
+  margin-left: 0px;
+  padding: 15px;
+  width: 100%;
+  margin-top: 12px;
+}
+/* Four link section */
+.linkMain {
+  margin-left: 10px;
+  width: 95%;
+  margin-top: 10px;
+  padding: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 20px;
+
+}
+.linkBtn {
+
+  margin-left: 10px;
+  width: 95%;
+}
+.linkBtn1 {
+  margin-left: 10px;
+  width: 95%;
+}
+
+.linkShare {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  text-align: center;
+}
+.linkInput{
+  border-bottom: 1.5px solid rgb(143, 140, 140);
+}
+
+/* advancedDetails */
+#StatisHeader {
+  margin-left: 15px;
+}
+#StatisParagraph {
+  margin-left: 0px;
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  margin-top: 5px;
+}
+#details{
+  /* display: none; */
+  top: 100px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  gap: 40px;
+  z-index: 100;
+  margin-left: 20px;
+  margin-bottom: 200px;
+}
+#brandRecognize{
+  text-align: center;
+  background-color: #fff;
+  width: 95%;
+  font-size: 18px;
+
+}
+#DetailedRecords{
+  margin-top: 40px;
+  width: 95%;
+text-align: center;
+font-size: 18px;
+
+}
+#FullyCustomizable{
+  width: 95%;
+margin-top: 40px;
+text-align: center;
+font-size: 18px;
+}
+.GreenLine{
+  width:600px;
+  background-color: hsl(180, 66%, 49%);
+  bottom: 600px;
+  margin-left: -100px;
+  position: relative;
+  transform: rotate(90deg);
+}
+/* boost */
+/* no change */
+ /* fotter */
+ #footer{
+  padding-left: 0px;
+  padding-bottom: 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 40%;
+ }
+ #log1image{
+  margin-left: 130px;
+  margin-bottom: 30px;
+  width: 40%;
+ }
+ #otherFeature{
+  display: flex;
+  gap:50px;
+  flex-direction: column;
+  text-align: center;
+ }
+ #socialMediaLogo{
+  display: flex;
+  gap: 40px;
+  margin-left: 100px;
+ }
+ #features,#resources,#company{
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+ }
 }

@@ -1,9 +1,9 @@
 const ShortInput = document.getElementById('ShortInput')
 const ShortBtn = document.getElementById('ShortBtn')
 const CreateLinkSection = document.getElementById('CreateLinkSection')
-
+const thirdMain = document.getElementById('thirdMain')
 async function short() {
-    
+
     let value = ShortInput.value;
     const response = await fetch(`https://tinyurl.com/api-create.php?url=${value}`);
     let data = await response.text(); //.json() is not working
@@ -41,50 +41,85 @@ async function short() {
     console.log(Element);
     
     btn.addEventListener('click',()=>{
-        setTimeout(() => {
+// to copy text
+        function copyShortLinkText() {
+            let textArea = document.createElement('textarea');
+            textArea.value = ahref.innerText;
+            document.body.appendChild(textArea);
+            textArea.select()
+            document.execCommand('copy');
+            document.body.removeChild(textArea);
+            
+        }
+        copyShortLinkText()
+
             btn.textContent = 'Copied'
             btn.classList.add('linkBtn1')
-        }, 100);
-       
-        setTimeout(() => {
-            Element.classList.add('hide')
-        
+            ahref.style.color = 'red'
+            
+            setTimeout(() => {
+                btn.classList.remove('linkBtn1')
+                btn.textContent = 'Copy'
+                ahref.style.color = '#2bd1d1'
+
         }, 500);
+            setTimeout(() => {
+                Element.classList.add('hide')
+// document.location.reload()
+        }, 1000);
        
 
     })
 
-    // const myTimeout = setTimeout(myGreeting, 5000);
 }
 
 
+
+// ShortBtn.addEventListener('click', () => {
+
+//     if (!ShortInput.value == [] ) {
+//         short()
+
+        
+//     } 
+//     else {
+//     ShortInput.style.border ="2px solid red"
+//     let span2 = document.createElement('span')
+//     span2.style.color = 'red'
+//     span2.textContent = 'Please add a link'
+//     thirdMain.appendChild(span2)
+// setTimeout(() => {
+//     thirdMain.removeChild(span2)
+//     ShortInput.style.border ="2px solid black"
+
+// }, 1000);
+  
+        
+//     }
+
+// })
 ShortBtn.addEventListener('click', () => {
-    short()
+    if (ShortInput.value.trim() !== "") {
+        short();
+    } 
+    else {
+        if (!document.querySelector('.error-message')) {
+            ShortInput.style.border = "2px solid red";
+            let span2 = document.createElement('span');
+            span2.className = 'error-message'; 
+            console.log(span2);
+            span2.style.color = 'red';
+            span2.textContent = 'Please add a link';
+            thirdMain.appendChild(span2);
+            setTimeout(() => {
+                thirdMain.removeChild(span2);
+                ShortInput.style.border = "2px solid black";
+            }, 1000);
+        }
+    }
+});
 
-})
 
-// to copy link
-btn.addEventListener('click',()=>{
-    const btn1 = document.createElement('button')
-    btn1.classList.add('linkBtn1')
-    btn1.textContent = 'Copy'
-    div.appendChild(btn1)
-    CreateLinkSection.append(Element)
-    // btn.classList.add('linkBtn1')
-})
 
-// const copyBtnAll = [...document.querySelectorAll('.linkBtn')]
-// copyBtnAll.forEach(ele => {
-   
-//     ele.addEventListener('click', (e) => {
-//         copyBtnAll.forEach(ele => {
-//             ele.textContent = 'Copy'
-//             ele.style.backgroundColor = 'hsl(180, 66%, 49%)'
-//         })
-//         copyTextToclipborad(shortLink)
-//         e.target.textContent = "Copied!"
-//         e.target.style.backgroundColor = 'hsl(257, 27%, 26%)'
-//     })
 
-// }) 
 
