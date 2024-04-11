@@ -105,6 +105,7 @@ ShortBtn.addEventListener('click', () => {
     else {
         if (!document.querySelector('.error-message')) {
             ShortInput.style.border = "2px solid red";
+            ShortInput.style.Color = "blue";
             let span2 = document.createElement('span');
             span2.className = 'error-message'; 
             console.log(span2);
@@ -118,6 +119,15 @@ ShortBtn.addEventListener('click', () => {
         }
     }
 });
+
+// to media querry menu
+let menuHide = document.querySelector('.mainmediaQuery')
+let ImageMain = document.getElementById('ImageMain')
+document.querySelector('.logomenu').addEventListener('click',()=>{
+menuHide.classList.toggle('hide')
+ImageMain.classList.toggle('hide')
+console.log('hey');
+})
 
 
 
